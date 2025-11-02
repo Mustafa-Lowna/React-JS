@@ -1,0 +1,31 @@
+.card {
+  border: 1px solid #272525;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 800px;
+  margin: auto;
+  margin-top: 30px;
+}
+.card h3 {
+  margin-top: 0;
+  color: #333;
+}
+.card p {
+  color: #555555;
+  line-height: 1.5;
+}
+h3 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: #2c3e50;
+}
+p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #34495e;
+}
+h4 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #9f1b0a;
+}
