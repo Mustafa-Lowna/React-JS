@@ -1,9 +1,9 @@
 import "./App.css";
-import CourseList3 from "./Components/CourseList3";
+import ProductListB from "./Components/ProductListB";
 function App() {
   return (
     <div id="app">
-      <CourseList3></CourseList3>
+      <ProductListB></ProductListB>
     </div>
   );
 }
