@@ -1,9 +1,9 @@
 import "./App.css";
-import ProductListB from "./Components/ProductListB";
+import Counter from "./Components/Counter";
 function App() {
   return (
     <div id="app">
-      <ProductListB></ProductListB>
+      <Counter></Counter>
     </div>
   );
 }
