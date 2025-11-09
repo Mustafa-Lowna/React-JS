@@ -1,9 +1,13 @@
 import "./App.css";
-import Counter from "./Components/Counter";
+import ProfileCard from "./Components/ProfileCard";
 function App() {
   return (
     <div id="app">
-      <Counter></Counter>
+      <ProfileCard
+        name="Ahmed"
+        age={22}
+        skills={["Graphic Designer", "Web Developer", "IOS Developer"]}
+      ></ProfileCard>
     </div>
   );
 }
