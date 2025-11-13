@@ -1,9 +1,9 @@
 import "./App.css";
-import CartItem from "./Components/CartItem";
+import EmployeeDirectory from "./Components/EmployeeDirectory";
 function App() {
   return (
     <div id="app">
-      <CartItem></CartItem>
+      <EmployeeDirectory></EmployeeDirectory>
     </div>
   );
 }
