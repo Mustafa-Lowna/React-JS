@@ -53,7 +53,6 @@ const courses: Course[] = [
 function CourseList3() {
   return (
     <div>
-      <h1>Course List 3</h1>
       <ul className="list-group">
         {courses.map((course) => (
           <li className="list-group-item">
