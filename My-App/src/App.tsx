@@ -1,15 +1,11 @@
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./Components/Home";
-import About from "./Components/About";
-import Contact from "./Components/Contact";
-import EmployeeDirectory from "./Components/EmployeeDirectory";
-import ProductDirectory from "./Components/ProductDirectory";
-import CourseList3 from "./Components/CourseList3";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import CourseDetails from "./Components/CourseDetails";
-import CourseList4 from "./Components/CourseList4";
+import Instructors from "./Components/Instructors";
+import Courses from "./Components/Courses";
+import Feedback from "./Components/Feedback";
 function App() {
   return (
     <BrowserRouter>
@@ -47,79 +43,30 @@ function App() {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/about">
-                      About
-                    </Link>
-                  </li>
-                  <li className="nav-item">
                     <Link className="nav-link" to="/courses">
                       Courses
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/contact">
-                      Contact
+                    <Link className="nav-link" to="/instructors">
+                      Instructors
                     </Link>
                   </li>
-                  <li className="nav-item dropdown">
-                    <Link
-                      className="nav-link dropdown-toggle"
-                      to="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Components
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/feedback">
+                      Feedback
                     </Link>
-                    <ul className="dropdown-menu">
-                      <li>
-                        <Link
-                          className="dropdown-item"
-                          to="/employee-directory"
-                        >
-                          Employee Directory
-                        </Link>
-                      </li>
-                      <li>
-                        <Link className="dropdown-item" to="/product-directory">
-                          Product Directory
-                        </Link>
-                      </li>
-                      <li>
-                        <Link className="dropdown-item" to="/course-list-3">
-                          Course List
-                        </Link>
-                      </li>
-                    </ul>
                   </li>
                 </ul>
-                <form className="d-flex" role="search">
-                  <input
-                    className="form-control me-2"
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                  />
-                  <button className="btn btn-outline-success" type="submit">
-                    Search
-                  </button>
-                </form>
               </div>
             </div>
           </nav>
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/courses" element={<CourseList4 />} />
-              <Route path="/courses/:id" element={<CourseDetails />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route
-                path="/employee-directory"
-                element={<EmployeeDirectory />}
-              />
-              <Route path="/product-directory" element={<ProductDirectory />} />
-              <Route path="/course-list-3" element={<CourseList3 />} />
+              <Route path="/courses" element={<Courses />} />
+              <Route path="/instructors" element={<Instructors />} />
+              <Route path="/feedback/" element={<Feedback />} />
             </Routes>
           </main>
         </div>
