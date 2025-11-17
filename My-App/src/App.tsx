@@ -8,6 +8,8 @@ import ProductDirectory from "./Components/ProductDirectory";
 import CourseList3 from "./Components/CourseList3";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import CourseDetails from "./Components/CourseDetails";
+import CourseList4 from "./Components/CourseList4";
 function App() {
   return (
     <BrowserRouter>
@@ -47,6 +49,11 @@ function App() {
                   <li className="nav-item">
                     <Link className="nav-link" to="/about">
                       About
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/courses">
+                      Courses
                     </Link>
                   </li>
                   <li className="nav-item">
@@ -104,6 +111,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/courses" element={<CourseList4 />} />
+              <Route path="/courses/:id" element={<CourseDetails />} />
               <Route path="/contact" element={<Contact />} />
               <Route
                 path="/employee-directory"
