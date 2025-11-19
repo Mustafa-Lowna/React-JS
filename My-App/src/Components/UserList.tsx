@@ -33,7 +33,7 @@ function UserList() {
         {users.map((user) => (
           <li key={user.id} className="list-group-item mb-2">
             <h4 className="text-warning mb-4">{user.name}</h4>
-            <p className="text-secondary">{user.email}</p>s
+            <p className="text-secondary">{user.email}</p>
             <p className="text-secondary">
               {user.address.street}, {user.address.suite}
             </p>
