@@ -9,6 +9,7 @@ import Feedback from "./Components/Feedback";
 import PostList from "./Components/PostList";
 import EmployeeList from "./Components/EmployeeList";
 import UserList from "./Components/UserList";
+import ProductList from "./Components/ProductList";
 function App() {
   return (
     <BrowserRouter>
@@ -66,6 +67,11 @@ function App() {
                     </Link>
                   </li>
                   <li className="nav-item">
+                    <Link className="nav-link" to="/products">
+                      Products
+                    </Link>
+                  </li>
+                  <li className="nav-item">
                     <Link className="nav-link" to="/instructors">
                       Instructors
                     </Link>
@@ -86,6 +92,7 @@ function App() {
               <Route path="/posts" element={<PostList />} />
               <Route path="/employees" element={<EmployeeList />} />
               <Route path="/users" element={<UserList />} />
+              <Route path="/products" element={<ProductList />} />
               <Route path="/instructors" element={<Instructors />} />
               <Route path="/feedback/" element={<Feedback />} />
             </Routes>
