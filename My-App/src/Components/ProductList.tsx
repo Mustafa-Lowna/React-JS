@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Product = {
   id: number;
@@ -17,14 +17,14 @@ function ProductList() {
     let data = await response.json();
     setProducts(data);
   };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
   return (
     <div className="container my-5">
       <h3 className="mb-4 fw-bold text-secondary">Product List</h3>
-
-      <button className="btn btn-primary mb-4" onClick={fetchProducts}>
-        Load Products
-      </button>
-
       <div className="row">
         {products.map((product) => (
           <div className="col-md-4 col-lg-3 mb-4" key={product.id}>
