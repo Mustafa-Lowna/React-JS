@@ -11,6 +11,7 @@ import UserList from "./Components/UserList";
 import ProductList from "./Components/ProductList";
 import RecipePages from "./Components/RecipePages";
 import RecipeSearch from "./Components/RecipeSearch";
+import CourseList5 from "./Components/CourseList5";
 function App() {
   return (
     <BrowserRouter>
@@ -22,6 +23,7 @@ function App() {
               <Link className="navbar-brand" to="/">
                 NovaHub
               </Link>
+
               <button
                 className="navbar-toggler"
                 type="button"
@@ -33,70 +35,97 @@ function App() {
               >
                 <span className="navbar-toggler-icon"></span>
               </button>
+
               <div
                 className="collapse navbar-collapse"
                 id="navbarTogglerDemo02"
               >
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                   <li className="nav-item">
-                    <Link
-                      className="nav-link active"
-                      aria-current="page"
-                      to="/"
-                    >
+                    <Link className="nav-link active" to="/">
                       Home
                     </Link>
                   </li>
+
                   <li className="nav-item">
                     <Link className="nav-link" to="/courses">
                       Courses
                     </Link>
                   </li>
+
                   <li className="nav-item">
                     <Link className="nav-link" to="/posts">
                       Post List
                     </Link>
                   </li>
+
                   <li className="nav-item">
                     <Link className="nav-link" to="/employees">
                       Employee List
                     </Link>
                   </li>
+
                   <li className="nav-item">
                     <Link className="nav-link" to="/users">
                       User List
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/products">
-                      Products
+                    <Link className="nav-link" to="/courselist">
+                      Course List
                     </Link>
                   </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/recipes">
-                      Recipes
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/recipe-search">
-                      Recipe Search
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/instructors">
-                      Instructors
-                    </Link>
+
+                  <li className="nav-item dropdown">
+                    <a
+                      className="nav-link dropdown-toggle"
+                      href="#"
+                      id="moreMenu"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      More
+                    </a>
+
+                    <ul className="dropdown-menu" aria-labelledby="moreMenu">
+                      <li>
+                        <Link className="dropdown-item" to="/products">
+                          Products
+                        </Link>
+                      </li>
+
+                      <li>
+                        <Link className="dropdown-item" to="/recipes">
+                          Recipes
+                        </Link>
+                      </li>
+
+                      <li>
+                        <Link className="dropdown-item" to="/recipe-search">
+                          Recipe Search
+                        </Link>
+                      </li>
+
+                      <li>
+                        <Link className="dropdown-item" to="/instructors">
+                          Instructors
+                        </Link>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </div>
             </div>
           </nav>
+
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/courses" element={<Courses />} />
               <Route path="/posts" element={<PostList />} />
               <Route path="/employees" element={<EmployeeList />} />
+              <Route path="/courselist" element={<CourseList5 />} />
               <Route path="/users" element={<UserList />} />
               <Route path="/products" element={<ProductList />} />
               <Route path="/recipes" element={<RecipePages />} />
