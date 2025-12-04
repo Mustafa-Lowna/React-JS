@@ -76,12 +76,6 @@ function App() {
                       Course List
                     </Link>
                   </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/courseadd">
-                      Course Add
-                    </Link>
-                  </li>
-
                   <li className="nav-item dropdown">
                     <a
                       className="nav-link dropdown-toggle"

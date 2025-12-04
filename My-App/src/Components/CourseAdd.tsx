@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./CourseAdd.css";
 
 const API_URL = "https://69303ff8778bbf9e00708d87.mockapi.io/api/Courses";
 
@@ -25,60 +26,48 @@ const CourseAdd = () => {
     navigate("/courseadd");
   };
   return (
-    <div className="container">
-      <h2 className="text-primary my-4">Add Course</h2>
+    <div className="container d-flex justify-content-center">
+      <div className="course-card p-4 shadow-sm bg-white">
+        <h3 className="text-primary mb-4 text-center fw-bold">
+          Add New Course
+        </h3>
 
-      <div id="addCourseForm" className="border rounded shadow p-4 bg-white">
         <div className="mb-4">
-          <label htmlFor="titleTextBox" className="form-label fw-semibold">
-            Course Title
-          </label>
+          <label className="form-label fw-semibold">Course Title</label>
           <input
             type="text"
-            id="titleTextBox"
-            className="form-control"
+            className="form-control pro-input"
             placeholder="e.g. React, Java, Python"
             value={title}
-            onChange={(event) => setTitle(event.target.value)}
+            onChange={(e) => setTitle(e.target.value)}
           />
         </div>
 
         <div className="mb-4">
-          <label
-            htmlFor="descriptionTextBox"
-            className="form-label fw-semibold"
-          >
-            Course Description
-          </label>
+          <label className="form-label fw-semibold">Course Description</label>
           <textarea
-            id="descriptionTextBox"
-            className="form-control"
-            rows="3"
-            placeholder="Write a short description... (topics, details)"
+            className="form-control pro-input"
+            rows={3}
+            placeholder="Brief course overview..."
             value={description}
-            onChange={(event) => setDescription(event.target.value)}
+            onChange={(e) => setDescription(e.target.value)}
           ></textarea>
         </div>
 
         <div className="mb-4">
-          <label htmlFor="priceTextBox" className="form-label fw-semibold">
-            Course Price (₹)
-          </label>
+          <label className="form-label fw-semibold">Course Price (₹)</label>
           <input
             type="number"
-            id="priceTextBox"
-            className="form-control"
-            placeholder="Enter course price"
+            className="form-control pro-input"
+            placeholder="Price in INR"
             value={price}
-            onChange={(event) => setPrice(event.target.value)}
+            onChange={(e) => setPrice(e.target.value)}
           />
         </div>
 
-        <div className="mt-4">
-          <button className="btn btn-primary w-100" onClick={addCourse}>
-            Add Course
-          </button>
-        </div>
+        <button className="btn btn-primary w-100 pro-btn" onClick={addCourse}>
+          Add Course
+        </button>
       </div>
     </div>
   );
