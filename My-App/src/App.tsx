@@ -5,12 +5,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Instructors from "./Components/Instructors";
 import Courses from "./Components/Courses";
-import Feedback from "./Components/Feedback";
 import PostList from "./Components/PostList";
 import EmployeeList from "./Components/EmployeeList";
 import UserList from "./Components/UserList";
 import ProductList from "./Components/ProductList";
 import RecipePages from "./Components/RecipePages";
+import RecipeSearch from "./Components/RecipeSearch";
 function App() {
   return (
     <BrowserRouter>
@@ -78,13 +78,13 @@ function App() {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/instructors">
-                      Instructors
+                    <Link className="nav-link" to="/recipe-search">
+                      Recipe Search
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/feedback">
-                      Feedback
+                    <Link className="nav-link" to="/instructors">
+                      Instructors
                     </Link>
                   </li>
                 </ul>
@@ -100,8 +100,8 @@ function App() {
               <Route path="/users" element={<UserList />} />
               <Route path="/products" element={<ProductList />} />
               <Route path="/recipes" element={<RecipePages />} />
+              <Route path="/recipe-search" element={<RecipeSearch />} />
               <Route path="/instructors" element={<Instructors />} />
-              <Route path="/feedback/" element={<Feedback />} />
             </Routes>
           </main>
         </div>
