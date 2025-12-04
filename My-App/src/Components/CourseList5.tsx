@@ -25,7 +25,7 @@ const CourseList5 = () => {
   return (
     <div id="container">
       <h1 className="text-danger">Course List</h1>
-      <Link to={`add-course`} className="btn btn-success my-3">
+      <Link to={`courseadd`} className="btn btn-success my-3">
         <i className="bi-plus-circle me-2"></i> Add Course
       </Link>
       <table className="table table-hover">
@@ -35,6 +35,7 @@ const CourseList5 = () => {
             <th scope="col">Title</th>
             <th scope="col">Description</th>
             <th scope="col">Price</th>
+            <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody>

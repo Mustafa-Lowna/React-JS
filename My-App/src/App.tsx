@@ -12,6 +12,7 @@ import ProductList from "./Components/ProductList";
 import RecipePages from "./Components/RecipePages";
 import RecipeSearch from "./Components/RecipeSearch";
 import CourseList5 from "./Components/CourseList5";
+import CourseAdd from "./Components/CourseAdd";
 function App() {
   return (
     <BrowserRouter>
@@ -75,6 +76,11 @@ function App() {
                       Course List
                     </Link>
                   </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/courseadd">
+                      Course Add
+                    </Link>
+                  </li>
 
                   <li className="nav-item dropdown">
                     <a
@@ -126,6 +132,7 @@ function App() {
               <Route path="/posts" element={<PostList />} />
               <Route path="/employees" element={<EmployeeList />} />
               <Route path="/courselist" element={<CourseList5 />} />
+              <Route path="/courseadd" element={<CourseAdd />} />
               <Route path="/users" element={<UserList />} />
               <Route path="/products" element={<ProductList />} />
               <Route path="/recipes" element={<RecipePages />} />
