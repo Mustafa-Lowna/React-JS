@@ -13,6 +13,7 @@ import RecipePages from "./Components/RecipePages";
 import RecipeSearch from "./Components/RecipeSearch";
 import CourseList5 from "./Components/CourseList5";
 import CourseAdd from "./Components/CourseAdd";
+import RegisterUser from "./Components/RegisterUser";
 function App() {
   return (
     <BrowserRouter>
@@ -47,7 +48,11 @@ function App() {
                       Home
                     </Link>
                   </li>
-
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/user-register">
+                      User Registration
+                    </Link>
+                  </li>
                   <li className="nav-item">
                     <Link className="nav-link" to="/courses">
                       Courses
@@ -66,11 +71,6 @@ function App() {
                     </Link>
                   </li>
 
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/users">
-                      User List
-                    </Link>
-                  </li>
                   <li className="nav-item">
                     <Link className="nav-link" to="/courselist">
                       Course List
@@ -94,7 +94,11 @@ function App() {
                           Products
                         </Link>
                       </li>
-
+                      <li className="nav-item">
+                        <Link className="nav-link" to="/users">
+                          User List
+                        </Link>
+                      </li>
                       <li>
                         <Link className="dropdown-item" to="/recipes">
                           Recipes
@@ -123,6 +127,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/courses" element={<Courses />} />
+              <Route path="/user-register" element={<RegisterUser />} />
               <Route path="/posts" element={<PostList />} />
               <Route path="/employees" element={<EmployeeList />} />
               <Route path="/courselist" element={<CourseList5 />} />

@@ -25,7 +25,7 @@ const CourseList5 = () => {
   return (
     <div id="container">
       <h1 className="text-danger">Course List</h1>
-      <Link to={`courseadd`} className="btn btn-success my-3">
+      <Link to={`/courseadd`} className="btn btn-success my-3">
         <i className="bi-plus-circle me-2"></i> Add Course
       </Link>
       <table className="table table-hover">
