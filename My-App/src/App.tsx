@@ -14,6 +14,7 @@ import RecipeSearch from "./Components/RecipeSearch";
 import CourseList5 from "./Components/CourseList5";
 import CourseAdd from "./Components/CourseAdd";
 import RegisterUser from "./Components/RegisterUser";
+import CourseEdit from "./Components/CourseEdit";
 function App() {
   return (
     <BrowserRouter>
@@ -54,18 +55,6 @@ function App() {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to="/courses">
-                      Courses
-                    </Link>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/posts">
-                      Post List
-                    </Link>
-                  </li>
-
-                  <li className="nav-item">
                     <Link className="nav-link" to="/employees">
                       Employee List
                     </Link>
@@ -95,6 +84,11 @@ function App() {
                         </Link>
                       </li>
                       <li className="nav-item">
+                        <Link className="nav-link" to="/courses">
+                          Courses
+                        </Link>
+                      </li>
+                      <li className="nav-item">
                         <Link className="nav-link" to="/users">
                           User List
                         </Link>
@@ -104,7 +98,11 @@ function App() {
                           Recipes
                         </Link>
                       </li>
-
+                      <li className="nav-item">
+                        <Link className="nav-link" to="/posts">
+                          Post List
+                        </Link>
+                      </li>
                       <li>
                         <Link className="dropdown-item" to="/recipe-search">
                           Recipe Search
@@ -126,15 +124,18 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/add-course" element={<CourseAdd />} />
               <Route path="/courses" element={<Courses />} />
               <Route path="/user-register" element={<RegisterUser />} />
               <Route path="/posts" element={<PostList />} />
               <Route path="/employees" element={<EmployeeList />} />
               <Route path="/courselist" element={<CourseList5 />} />
               <Route path="/courseadd" element={<CourseAdd />} />
+              <Route path="/edit-course/:id" element={<CourseEdit />} />
               <Route path="/users" element={<UserList />} />
               <Route path="/products" element={<ProductList />} />
               <Route path="/recipes" element={<RecipePages />} />
+              ``
               <Route path="/recipe-search" element={<RecipeSearch />} />
               <Route path="/instructors" element={<Instructors />} />
             </Routes>
