@@ -15,13 +15,14 @@ import CourseList5 from "./Components/CourseList5";
 import CourseAdd from "./Components/CourseAdd";
 import RegisterUser from "./Components/RegisterUser";
 import CourseEdit from "./Components/CourseEdit";
+import EmployeeCard from "./Components/EmployeeCard";
 function App() {
   return (
     <BrowserRouter>
       <div id="app">
         <div className="container my-3">
           <h1 className="mb-4 text-center">My React App</h1>
-          <nav className="navbar navbar-expand-lg bg-body-tertiary bg-light">
+          {/* <nav className="navbar navbar-expand-lg bg-body-tertiary bg-light">
             <div className="container-fluid">
               <Link className="navbar-brand" to="/">
                 NovaHub
@@ -108,7 +109,6 @@ function App() {
                           Recipe Search
                         </Link>
                       </li>
-
                       <li>
                         <Link className="dropdown-item" to="/instructors">
                           Instructors
@@ -119,7 +119,31 @@ function App() {
                 </ul>
               </div>
             </div>
-          </nav>
+          </nav> */}
+          <EmployeeCard
+            name="Ayesha Khan"
+            position="UI/UX Designer"
+            department="Design"
+            salary={2800}
+          >
+            <h4 className="text-secondary">More Info</h4>
+            <p className="text-muted">
+              Ayesha Khan designs modern, user-friendly interfaces and has led
+              multiple successful redesign projects for the company.
+            </p>
+          </EmployeeCard>
+
+          <EmployeeCard
+            name="Rahul Sharma"
+            position="Full Stack Developer"
+            department="Engineering"
+            salary={3200}
+          >
+            <p className="text-muted">
+              Rahul Sharma works on both frontend and backend services and
+              maintains the company's core web applications.
+            </p>
+          </EmployeeCard>
 
           <main>
             <Routes>

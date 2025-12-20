@@ -1,13 +1,36 @@
-import "./App.css";
-import ThemeComponent from "./Components/ThemeComponent";
-import { ThemeContext } from "./Context/ThemeContext";
-
+import { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import ThemeContext from "./Context/ThemeContext";
+import type { Theme } from "./Context/ThemeContext";
+import ThemeToggler from "./Components/ThemeToggler";
+import ThemedCard from "./Components/ThemeCard";
+import ThemedTable from "./Components/ThemeTable";
 function App() {
+  const [theme, setTheme] = useState<Theme>("light");
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  };
+
   return (
-    <ThemeContext.Provider value="dark">
-      <div>
-        <h1>Use Context Demo</h1>
-        <ThemeComponent></ThemeComponent>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <div
+        className={`min-vh-100 p-5 ${
+          theme === "light" ? "bg-light" : "bg-dark"
+        }`}
+      >
+        <div className="container">
+          <h1
+            className={`mb-4 text-center ${
+              theme === "light" ? "text-dark" : "text-light"
+            }`}
+          >
+            React Theme Toggle using Bootstrap
+          </h1>
+          <ThemeToggler />
+          <ThemedCard />
+          <ThemedTable />
+        </div>
       </div>
     </ThemeContext.Provider>
   );

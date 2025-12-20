@@ -4,6 +4,7 @@ type EmployeeProps = {
   position: string;
   department: string;
   salary: number;
+  children?: any;
 };
 function EmployeeCard(props: EmployeeProps) {
   return (
@@ -13,6 +14,7 @@ function EmployeeCard(props: EmployeeProps) {
         <h4 className="card-title text-danger">{props.position}</h4>
         <p className="card-text">Department: {props.department}</p>
         <p className="card-text text-secondary">Salary: ${props.salary}</p>
+        {props.children}
       </div>
     </div>
   );
