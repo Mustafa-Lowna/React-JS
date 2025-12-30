@@ -13,7 +13,6 @@ import RecipePages from "./Components/RecipePages";
 import RecipeSearch from "./Components/RecipeSearch";
 import CourseList5 from "./Components/CourseList5";
 import CourseAdd from "./Components/CourseAdd";
-import RegisterUser from "./Components/RegisterUser";
 import CourseEdit from "./Components/CourseEdit";
 import EmployeeCard from "./Components/EmployeeCard";
 function App() {
@@ -22,7 +21,7 @@ function App() {
       <div id="app">
         <div className="container my-3">
           <h1 className="mb-4 text-center">My React App</h1>
-          {/* <nav className="navbar navbar-expand-lg bg-body-tertiary bg-light">
+          <nav className="navbar navbar-expand-lg bg-body-tertiary bg-light">
             <div className="container-fluid">
               <Link className="navbar-brand" to="/">
                 NovaHub
@@ -119,7 +118,7 @@ function App() {
                 </ul>
               </div>
             </div>
-          </nav> */}
+          </nav>
           <EmployeeCard
             name="Ayesha Khan"
             position="UI/UX Designer"
@@ -150,7 +149,6 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/add-course" element={<CourseAdd />} />
               <Route path="/courses" element={<Courses />} />
-              <Route path="/user-register" element={<RegisterUser />} />
               <Route path="/posts" element={<PostList />} />
               <Route path="/employees" element={<EmployeeList />} />
               <Route path="/courselist" element={<CourseList5 />} />
